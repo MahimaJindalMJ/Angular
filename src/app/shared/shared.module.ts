@@ -12,8 +12,10 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { HighchartsChartModule } from 'highcharts-angular';
-import { Component, OnInit, Input } from '@angular/core';
-
+import { AreaComponent } from './widgets/area/area.component';
+import { CardComponent } from './widgets/card/card.component';
+import { PieComponent } from './widgets/pie/pie.component';
+import { StackedAreaComponent } from './widgets/stacked-area/stacked-area.component';
 
 
 @NgModule({
@@ -21,6 +23,10 @@ import { Component, OnInit, Input } from '@angular/core';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent,
+    StackedAreaComponent,
   ],
   imports: [
     CommonModule,
@@ -33,11 +39,16 @@ import { Component, OnInit, Input } from '@angular/core';
     FlexLayoutModule,
     HighchartsChartModule,
     RouterModule,
+    
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent,
+    StackedAreaComponent,
   ]
 })
 export class SharedModule { }
